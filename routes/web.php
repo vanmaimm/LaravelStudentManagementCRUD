@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/students', "StudentController@index");
+Route::get('/students/create', "StudentController@create");
+Route::post('/students', "StudentController@store");
+Route::get('/students/edit/{id}', "StudentController@edit");
+Route::patch('/students/{id}', "StudentController@update");
+Route::delete('/students/delete/{id}', "StudentController@destroy");
